@@ -5,6 +5,8 @@ root.title("Task Destroyer 9001")
 root.geometry("720x300")
 
 def addItem():
+    input_text = taskEntry.get()  #getting the text from the text box input
+    taskBox.insert('end',input_text)   #inserting the text input variable in the listbox
     #PUT LOGIC FOR ADDING ITEM FROM 'taskEntry' TO MASTER TASK LIST
     taskEntry.delete(0, 'end')      # Destroys text inside taskEntry
     print("item added")
@@ -43,7 +45,7 @@ deleteAllButton = Button(leftFrame, text="Delete All", command=deleteAll, width=
 exitAppButton = Button(leftFrame, text="Quit", command=root.destroy, width=10, fg="red")
 
 # Create ListBox Widget
-taskBox = Listbox(rightFrame, height=10)
+taskBox = Listbox(rightFrame, height=30,width=30)
 
 # Put Widgets on screen
 enterTaskLabel.grid(row=1, column=1, columnspan=2, sticky=W)
@@ -53,5 +55,5 @@ addItemButton.grid(row=3, column=4, sticky=E)
 deleteItemButton.grid(row=4, column=1, sticky=W)
 deleteAllButton.grid(row=5, column=1, sticky=W)
 exitAppButton.grid(row=6, column=1, sticky=W)
-
+taskBox.grid(row=2,column=1,sticky=W)
 root.mainloop()
