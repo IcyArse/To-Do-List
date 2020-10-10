@@ -1,0 +1,3 @@
+print(task_items):["Do morning routine", "Don't fail Physics", "Learn to code more", "Help make website for organization"]
+print(task_items):["Hard", "Very Hard", "Medium", "Medium"]
+print(task_items):["Due every day", "Due by October 25th", "Duee by December 31st", "Due by April 19th"]
